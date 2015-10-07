@@ -57,20 +57,16 @@
     function sidebar(panels) {
         $.asm.panels = panels;
           if (panels === 1) {
-            // $('#content').removeClass('span9');
-            // $('#content').addClass('span12 no-sidebar');
             $('#sidebar').animate({
                   right: -200,
             });
           } else if (panels === 2) {
-            // $('#content').removeClass('span12 no-sidebar');
-            // $('#content').addClass('span9');
               $('#sidebar').animate({
                   right: 20,
               });
           $('#mapCanvas').width($('#mapCanvas').parent().width());
           $('#mapCanvas').height($(window).height() - 50);
-          $('#sidebar').height($(window).height() - 50);
+          // $('#sidebar').height($(window).height() - 50);
           return google.maps.event.trigger($.asm.theMap, 'resize');
           }
         };
