@@ -47,4 +47,44 @@
 
   <%= render :partial => 'shared/footer' %>
   </body>
+
+
+  <%# slideout sidebar %>
+  <script>
+    $.asm = {};
+    $.asm.panels = 1;
+
+    function sidebar(panels) {
+        $.asm.panels = panels;
+          if (panels === 1) {
+            // $('#content').removeClass('span9');
+            // $('#content').addClass('span12 no-sidebar');
+            $('#sidebar').animate({
+                  right: -200,
+            });
+          } else if (panels === 2) {
+            // $('#content').removeClass('span12 no-sidebar');
+            // $('#content').addClass('span9');
+              $('#sidebar').animate({
+                  right: 20,
+              });
+          $('#mapCanvas').width($('#mapCanvas').parent().width());
+          $('#mapCanvas').height($(window).height() - 50);
+          $('#sidebar').height($(window).height() - 50);
+          return google.maps.event.trigger($.asm.theMap, 'resize');
+          }
+        };
+
+        $('#toggleSidebar').click(function() {
+          if ($.asm.panels === 1) {
+            $('#toggleSidebar i').addClass('fa-chevron-left');
+            $('#toggleSidebar i').removeClass('fa-chevron-right');
+            return sidebar(2);
+          } else {
+            $('#toggleSidebar i').removeClass('fa-chevron-left');
+            $('#toggleSidebar i').addClass('fa-chevron-right');
+            return sidebar(1);
+          }
+        });
+  </script>
 </html>
