@@ -1,0 +1,32 @@
+#facets {
+	border-top: 1px solid #c0c4c2;
+	padding-bottom: 0;
+	.top-panel-heading {
+		padding: 0;
+	}
+	.facets-heading {
+		font-size: 16px;
+		font-weight: normal;
+	}
+	// .panel {
+	// 	background: $navy;
+	// 	color: white;
+	// }
+	.panel-heading.collapse-toggle .panel-title:after {
+		color: white;
+	}
+	.panel-default > .panel-heading {
+		background: $navy;
+		color: white;
+		border-radius: 0;
+	}
+	.panel-group .panel {
+		border-radius: 0;
+	}
+	.panel {
+		border-color: $navy;
+	}
+	.panel-group {
+		margin-bottom: 0;
+	}
+}

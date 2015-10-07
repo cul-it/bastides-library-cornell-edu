@@ -30,11 +30,11 @@
 }
 
 #sidebar {
-    // background: white;
     position: fixed;
-    top: 200px;
-    right: -200px;
-    width: 200px;
+    top: 50px;
+    right: -300px;
+    width: 300px;
+    padding: 2.5em;
     background: $pale-gray;
 }
 
@@ -48,5 +48,4 @@
     float: right;
     height: 100%;
     width: 20px;
-    margin-top: 41px;
 }

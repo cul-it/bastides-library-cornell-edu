@@ -1,0 +1,21 @@
+#sidebar {
+	h1 {
+		margin: 0 0 .5em 0;
+		font-family: $font-family-cul;
+		text-transform: uppercase;
+	}
+	.nav > li > a {
+		padding: 10px 0;
+		border-top: 1px solid #c0c4c2;
+		color: $navy;
+	}
+	.nav > li:first-child > a {
+		border-top: 0;
+	}
+	.nav > li > a:hover,
+	.nav > li > a:active,
+	.nav > li > a:focus {
+		color: $aqua-dark;
+		background: inherit;
+	}
+}
