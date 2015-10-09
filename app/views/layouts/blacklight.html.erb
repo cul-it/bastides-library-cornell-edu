@@ -62,7 +62,7 @@
             });
           } else if (panels === 2) {
               $('#sidebar').animate({
-                  right: 20,
+                  right: -20,
               });
           $('#mapCanvas').width($('#mapCanvas').parent().width());
           $('#mapCanvas').height($(window).height() - 50);
@@ -73,12 +73,12 @@
 
         $('#toggleSidebar').click(function() {
           if ($.asm.panels === 1) {
-            $('#toggleSidebar i').addClass('fa-chevron-left');
-            $('#toggleSidebar i').removeClass('fa-chevron-right');
+            $('#toggleSidebar i').addClass('fa-minus');
+            $('#toggleSidebar i').removeClass('fa-plus');
             return sidebar(2);
           } else {
-            $('#toggleSidebar i').removeClass('fa-chevron-left');
-            $('#toggleSidebar i').addClass('fa-chevron-right');
+            $('#toggleSidebar i').removeClass('fa-minus');
+            $('#toggleSidebar i').addClass('fa-plus');
             return sidebar(1);
           }
         });

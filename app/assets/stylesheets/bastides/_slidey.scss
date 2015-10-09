@@ -3,11 +3,6 @@
 // http://stackoverflow.com/questions/13604285/collapsible-sidebar-with-fluid-twitter-bootstrap 
 // http://jsfiddle.net/dmyTR/37/ 
 
-
-#content {
-    margin-left: 5px;
-}
-
 #mapCanvas img {
     max-width: none;
 }
@@ -31,11 +26,13 @@
 
 #sidebar {
     position: fixed;
-    top: 50px;
+    top: 125px;
     right: -300px;
     width: 300px;
     padding: 2.5em;
     background: $pale-gray;
+    z-index: 2000;
+    overflow: scroll;
 }
 
 // #sidebar-content {
@@ -45,7 +42,20 @@
 // }
 
 #toggleSidebar {
-    float: right;
-    height: 100%;
-    width: 20px;
+    position: fixed;
+    top: 75px;
+    right: 0;
+    background: $navy;
+    padding: 10px 20px;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    i {
+        margin-left: .25em;
+        color: $turquoise;
+    }
+}
+#toggleSidebar:hover, #toggleSidebar:active, #toggleSidebar:focus {
+    color: white;
+    text-decoration: none;
 }
