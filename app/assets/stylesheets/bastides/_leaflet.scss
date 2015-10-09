@@ -1,0 +1,9 @@
+// Gem overrides
+// ------------ //
+
+.leaflet-container {
+	font-family: $font-family-sans-serif !important;
+	a {
+		color: $link-color !important;
+	}
+}
