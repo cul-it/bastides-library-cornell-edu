@@ -30,6 +30,7 @@
     <![endif]-->
 
   </head>
+  <%# TODO: this isn't working %>
   <% if current_page?('/') %>
     <body class="<%= render_body_class %> blacklight-home">
   <% else %>
@@ -44,9 +45,7 @@
 
     <%= render :partial=>'/flash_msg', layout: 'shared/flash_messages' %>
 
-    <div class="row">
-      <%= yield %>
-    </div>
+    <%= yield %>
   </div>
 
   <%= render :partial => 'shared/footer' %>
@@ -66,7 +65,7 @@
             });
           } else if (panels === 2) {
               $('#sidebar').animate({
-                  right: -20,
+                  right: 0,
               });
           $('#mapCanvas').width($('#mapCanvas').parent().width());
           $('#mapCanvas').height($(window).height() - 50);

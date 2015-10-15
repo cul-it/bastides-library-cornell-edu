@@ -21,18 +21,19 @@
 }
 
 .no-sidebar {
-    margin-left:0 !important;
+    margin-right:0 !important;
 }
 
 #sidebar {
     position: fixed;
-    top: 125px;
+    top: 97px;
     right: -300px;
     width: 300px;
     padding: 2.5em;
     background: $pale-gray;
-    z-index: 2000;
-    overflow: scroll;
+    z-index: 4000;
+    overflow-y: auto;
+    height: 550px;
 }
 
 // #sidebar-content {
@@ -43,7 +44,7 @@
 
 #toggleSidebar {
     position: fixed;
-    top: 75px;
+    top: 60px;
     right: 0;
     background: $navy;
     padding: 10px 20px;
