@@ -1,0 +1,63 @@
+
+// Slideout nav taken from:
+// http://stackoverflow.com/questions/13604285/collapsible-sidebar-with-fluid-twitter-bootstrap 
+// http://jsfiddle.net/dmyTR/37/ 
+
+#mapCanvas img {
+    max-width: none;
+}
+
+
+
+
+.accordion-heading .accordion-toggle-small {
+    display: block;
+    padding: 4px 8px; /*8px 15px;*/
+}
+
+.accordion-inner-small {
+    padding: 4px 8px;  /*9px 15px;*/
+    border-top: 1px solid #e5e5e5;
+}
+
+.no-sidebar {
+    margin-right:0 !important;
+}
+
+#sidebar {
+    position: fixed;
+    top: 97px;
+    right: -300px;
+    width: 300px;
+    padding: 2.5em;
+    background: $pale-gray;
+    z-index: 4000;
+    overflow-y: auto;
+    height: 550px;
+}
+
+// #sidebar-content {
+//     width: 80%;
+//     float: left;
+//     background-color: white;
+// }
+
+#toggleSidebar {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background: $navy;
+    padding: 10px 20px;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    z-index: 4000;
+    i {
+        margin-left: .25em;
+        color: $turquoise;
+    }
+}
+#toggleSidebar:hover, #toggleSidebar:active, #toggleSidebar:focus {
+    color: white;
+    text-decoration: none;
+}
