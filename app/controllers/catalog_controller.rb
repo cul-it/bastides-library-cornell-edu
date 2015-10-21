@@ -85,9 +85,9 @@ end
     #config.add_facet_field 'Date_i', :label => 'Year photographed', :sort => 'count', :limit => true
     #config.add_facet_field 'Founder_s', :label => 'Founder', :sort => 'count', :limit => true
     config.add_facet_field 'date_tesim', :label => 'Image Date', :limit => 5, :range => true
-    config.add_facet_field 'creator_facet_tesim', :label => 'Creator', :sort => 'count', :limit => 5
+    #config.add_facet_field 'creator_facet_tesim', :label => 'Creator', :sort => 'count', :limit => 5
     config.add_facet_field 'location_facet_tesim', :label => 'Location', :sort => 'count', :limit => 5
-    config.add_facet_field 'subject_tesim', :label => 'Subject', :limit => 5
+    #config.add_facet_field 'subject_tesim', :label => 'Subject', :limit => 5
     config.add_facet_field 'mat_tech_tesim', :label => 'Materials', :limit => 5
     config.add_facet_field 'founder_tesim', :label => 'Village Founder', :limit => 5
     config.add_facet_field 'fd_27325_tsi', :label => 'Year of photo', :limit => 5
