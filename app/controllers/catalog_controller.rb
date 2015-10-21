@@ -84,7 +84,7 @@ end
     #config.add_facet_field 'Village_s', :label => 'Village', :limit => true
     #config.add_facet_field 'Date_i', :label => 'Year photographed', :sort => 'count', :limit => true
     #config.add_facet_field 'Founder_s', :label => 'Founder', :sort => 'count', :limit => true
-    config.add_facet_field 'date_tesim', :label => 'Date', :limit => 5, :range => true
+    config.add_facet_field 'date_tesim', :label => 'Image Date', :limit => 5, :range => true
     config.add_facet_field 'creator_facet_tesim', :label => 'Creator', :sort => 'count', :limit => 5
     config.add_facet_field 'location_facet_tesim', :label => 'Location', :sort => 'count', :limit => 5
     config.add_facet_field 'subject_tesim', :label => 'Subject', :limit => 5
@@ -120,7 +120,7 @@ end
     # handler defaults, or have no facets.
     config.add_facet_fields_to_solr_request!
 
-    config.add_index_field 'date_tesim', :label => 'Date'
+    config.add_index_field 'date_tesim', :label => 'Image Date'
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
@@ -144,7 +144,7 @@ end
     config.add_show_field 'collection_tesim', :label => 'Collection', :link_to_search => true
     config.add_show_field 'creator_tesim', :label => 'Creator(s)', :link_to_search => true
     config.add_show_field 'author_tesim', :label => 'Author', :link_to_search => true
-    config.add_show_field 'date_tesim', :label => 'Date', :link_to_search => true
+    config.add_show_field 'date_tesim', :label => 'Image Date', :link_to_search => true
     config.add_show_field 'description_tesim', :label => 'Description',:link_to_search => true
     config.add_show_field 'location_tesim', :label => 'Location', :link_to_search => true
     config.add_show_field 'creation_site_location_tesim', :label => 'Creation Site', :link_to_search => true
