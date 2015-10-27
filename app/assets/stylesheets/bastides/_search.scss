@@ -1,0 +1,29 @@
+.header-search {
+	@include make-sm-column(6);
+	text-align: right;
+	form {
+		margin-top: 2em;
+		float: right;
+		width: 100%;
+	}
+}
+.search-btn,
+.search-btn:hover,
+.search-btn:active,
+.search-btn:focus {
+	background: inherit;
+	border: inherit;
+}
+.search-btn {
+	padding-top: 2px;
+	padding-bottom: 0;
+	.fa {
+		font-size: 2em;
+		color: $aqua;
+	}
+}
+
+// BS override
+.input-group-btn {
+	width: 1% !important;
+}

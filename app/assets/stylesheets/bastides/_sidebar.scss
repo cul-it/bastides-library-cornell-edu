@@ -1,4 +1,7 @@
 #sidebar {
+	background: $pale-gray;
+	border-bottom: 5px solid $aqua;
+	padding-top: 1em;
 	h1 {
 		margin: 0 0 .5em 0;
 		font-family: $font-family-cul;
@@ -19,3 +22,21 @@
 		background: inherit;
 	}
 }
+
+
+// MEDIA QUERIES
+// -------------------------
+
+// Small devices (tablets, 768px and up)
+@media (min-width: $screen-sm) { 
+	#sidebar-collapse {
+		display: block !important;
+	}
+}
+
+// Medium devices (desktops, 992px and up)
+// @media (min-width: $screen-md) {
+// }
+// Large devices (desktops, 1200px and up)
+// @media (min-width: $screen-lg) {
+// }

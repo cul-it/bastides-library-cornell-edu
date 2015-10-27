@@ -1,26 +1,17 @@
-// Cornell branding 
+header {
+	background: $navy;
+	padding: .75em 0;
+}
+
+
+// Branding
 // ------------------- //
 .cornell-identity {
-	.cornell-brand {
-		background: $gray-dark;
-	}
+	@include make-sm-column(6);
 }
-
-.library-brand {
-	padding: .5em 0;
-}
-
-// Bastides brand
-.brand {
-	text-transform: uppercase;
-	font-size: 36px;
-	font-family: $font-family-cul;
-	color: $navy;
-	line-height: 1em;
-}
-.brand:hover, .brand:active, .brand:focus {
-	color: $navy;
-	text-decoration: none;
+.insignia {
+	float: left;
+	margin-right: 1em;
 }
 
 // Library brand
@@ -28,18 +19,38 @@
 	font-size: 24px;
 	font-family: $font-family-cul;
 	display: block;
-	color: $navy;
+	color: white;
+	margin-top: 1em;
 }
 .cul-brand:hover, .cul-brand:active, .cul-brand:focus {
-	color: $navy;
+	color: white;
+	text-decoration: none;
+}
+
+// Bastides brand
+.brand {
+	text-transform: uppercase;
+	font-size: 40px;
+	font-family: $font-family-cul;
+	color: $turquoise;
+	line-height: 1em;
+}
+.brand:hover, .brand:active, .brand:focus {
+	color: $turquoise;
 	text-decoration: none;
 }
 
 // Util links
 // ------------- //
-.util-links {
-	a {
+.user-links {
+	.navbar-nav {
+		float: right;
+	}
+	.navbar-nav > li > a {
+		padding-top: 5px;
+		padding-bottom: 5px;
 		color: white;
+		font-size: 14px;
 	}
 	.nav > li > a:hover,
 	.nav > li > a:active,

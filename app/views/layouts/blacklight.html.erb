@@ -50,40 +50,4 @@
 
   <%= render :partial => 'shared/footer' %>
   </body>
-
-
-  <%# slideout sidebar %>
-  <script>
-    $.asm = {};
-    $.asm.panels = 1;
-
-    function sidebar(panels) {
-        $.asm.panels = panels;
-          if (panels === 1) {
-            $('#sidebar').animate({
-                  right: -300,
-            });
-          } else if (panels === 2) {
-              $('#sidebar').animate({
-                  right: 0,
-              });
-          $('#mapCanvas').width($('#mapCanvas').parent().width());
-          $('#mapCanvas').height($(window).height() - 50);
-          // $('#sidebar').height($(window).height() - 50);
-          return google.maps.event.trigger($.asm.theMap, 'resize');
-          }
-        };
-
-        $('#toggleSidebar').click(function() {
-          if ($.asm.panels === 1) {
-            $('#toggleSidebar i').addClass('fa-minus');
-            $('#toggleSidebar i').removeClass('fa-plus');
-            return sidebar(2);
-          } else {
-            $('#toggleSidebar i').removeClass('fa-minus');
-            $('#toggleSidebar i').addClass('fa-plus');
-            return sidebar(1);
-          }
-        });
-  </script>
 </html>
