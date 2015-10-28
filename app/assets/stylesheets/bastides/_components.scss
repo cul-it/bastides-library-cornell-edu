@@ -8,3 +8,9 @@
 		font-size: 75%;
 	}
 }
+.well {
+	box-shadow: none;
+	border-radius: 0;
+	border: 0;
+	background: $well-bg;
+}

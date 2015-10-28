@@ -27,3 +27,17 @@
 .input-group-btn {
 	width: 1% !important;
 }
+
+// Search results - gallery
+// ---------------------------
+.gallery {
+	h5 {
+		font-size: 16px;
+		line-height: 1.25em;
+	}
+}
+.thumbnail {
+	background: inherit;
+	border-radius: 0;
+	padding: 6px;
+}
