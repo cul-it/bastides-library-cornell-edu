@@ -15,7 +15,7 @@ end
 
 
   configure_blacklight do |config|          
-    config.view.gallery.partials = [:index_header, :index]
+    config.view.gallery.partials = [:index_header]
     #config.view.masonry.partials = [:index]
     #config.view.slideshow.partials = [:index]
 
@@ -128,7 +128,7 @@ end
     config.add_index_field 'founder_tesim', :label => 'Founder'
     config.add_index_field 'market_square_details_tesim', :label => 'Market Square Details'
     config.add_index_field 'creator_tesim', :label => 'Creator', :link_to_search => true
-    config.add_index_field 'collection_tesim', :label => 'Collection', :link_to_search => true
+    #config.add_index_field 'collection_tesim', :label => 'Collection', :link_to_search => true
 
 
     #config.add_index_field 'language_facet', :label => 'Language'
@@ -141,7 +141,7 @@ end
 
 
     #core fields
-    config.add_show_field 'collection_tesim', :label => 'Collection', :link_to_search => true
+    #config.add_show_field 'collection_tesim', :label => 'Collection', :link_to_search => true
     config.add_show_field 'creator_tesim', :label => 'Creator(s)', :link_to_search => true
     config.add_show_field 'author_tesim', :label => 'Author', :link_to_search => true
     config.add_show_field 'date_tesim', :label => 'Image Date', :link_to_search => true
