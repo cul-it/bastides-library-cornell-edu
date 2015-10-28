@@ -1,7 +1,18 @@
 body {
 	font-family: $font-family-sans-serif;
-	// background: $body-bg; // footer color
-	// color: $text-color;
+	background: $body-bg; // footer color
+}
+
+// Links
+// ------------------- //
+
+a { 
+	color: $link-color;
+	text-decoration: underline;
+}
+a:hover {
+	color: $link-color-hover;
+	text-decoration: underline;
 }
 
 // Typography
