@@ -2,7 +2,51 @@
 	border: 0 !important;
 	box-shadow: none !important;
 }
+.bxslider {
+	margin-top: 1em;
+}
 .prev-next {
 	text-align: right;
 	margin-top: 2.5em;
+	font-size: 16px;
+}
+.slide-number {
+	font-size: 4em;
+	color: $pale-gray;
+	font-weight: 700;
+	margin: 0 0 5px 5px;
+	padding-top: 10px;
+}
+#slider-next {
+	padding-left: .5em;
+	i {
+		margin-left: .25em;
+	}
+}
+#slider-prev {
+	padding-right: .5em;
+	i {
+		margin-right: .25em;
+	}
+}
+.btn-menu {
+    background: $navy;
+    padding: 10px 20px;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    i {
+        margin-left: .25em;
+        color: $turquoise;
+    }
+}
+.btn-menu:hover, .btn-menu:active, .btn-menu:focus {
+    color: white;
+    text-decoration: none;
+}
+.menu-toggle {
+	text-align: right;
+	.dropdown-menu {
+		right: 0;
+	}
 }
