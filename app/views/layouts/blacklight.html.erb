@@ -50,5 +50,13 @@
   </div><%# add extra closing div to fix this layout bug: https://issues.library.cornell.edu/browse/DIGCOLL-219 %>
 
   <%= render :partial => 'shared/footer' %>
+    <script>
+      $('.bxslider').bxSlider({
+        nextSelector: '#slider-next',
+        prevSelector: '#slider-prev',
+        nextText: 'Next →',
+        prevText: '← Previous'
+      });
+    </script>
   </body>
 </html>
