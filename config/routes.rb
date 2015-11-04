@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   root to: "catalog#index"
   blacklight_for :catalog
 
-  get '/about' => 'high_voltage/pages#show', id: 'about'
+  # get '/about' => 'high_voltage/pages#show', id: 'about'
+  # get '/bastides' => 'high_voltage/pages#show', id: 'bastides'
+  get '/labastide-darmagnac' => 'high_voltage/pages#show', id: 'labastide_darmagnac'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

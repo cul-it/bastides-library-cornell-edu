@@ -14,3 +14,13 @@
 	border: 0;
 	background: $well-bg;
 }
+.btn-bastides {
+	background: $turquoise;
+	color: white;
+	display: inline-block;
+	margin: 0 0 1em 1em;
+}
+.btn-bastides:hover, .btn-bastides:active, .btn-bastides:focus {
+	background: $turquoise;
+	color: white;
+}
