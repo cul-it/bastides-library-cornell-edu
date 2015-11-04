@@ -37,6 +37,9 @@ gem 'font-awesome-sass', '~> 4.3.0'
 #static pages gem
 gem 'high_voltage', '~> 2.3.0'
 
+#lightbox used on static pages
+gem 'lightbox2-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
