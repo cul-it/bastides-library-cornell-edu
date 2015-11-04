@@ -29,3 +29,24 @@
 		margin-right: .25em;
 	}
 }
+.btn-menu {
+    background: $navy;
+    padding: 10px 20px;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    i {
+        margin-left: .25em;
+        color: $turquoise;
+    }
+}
+.btn-menu:hover, .btn-menu:active, .btn-menu:focus {
+    color: white;
+    text-decoration: none;
+}
+.menu-toggle {
+	text-align: right;
+	.dropdown-menu {
+		right: 0;
+	}
+}
