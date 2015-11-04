@@ -37,12 +37,13 @@
 // ----------------
 .btn-menu {
     background: $navy;
-    padding: 10px 20px;
+    padding: 10px 15px;
     color: white;
     font-size: 12px;
     text-transform: uppercase;
+    border: 0;
     i {
-        margin-left: .25em;
+        margin-right: .5em;
         color: $turquoise;
     }
 }
@@ -61,12 +62,14 @@
 .bastide {
 	@include make-sm-column(3);
 	text-align: center;
+	margin-bottom: 2em;
 	img {
 		margin-bottom: 1em;
 	}
 	h3 {
 		font-size: 18px;
 		margin: 0;
+		font-weight: normal;
 	}
 }
 .back-link {
