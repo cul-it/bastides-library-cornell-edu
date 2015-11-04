@@ -1,7 +1,17 @@
 body {
 	font-family: $font-family-sans-serif;
-	// background: $body-bg; // footer color
-	// color: $text-color;
+	background: $body-bg; // footer color
+}
+
+// Links
+// ------------------- //
+
+a { 
+	color: $link-color;
+}
+a:hover {
+	color: $link-color-hover;
+	text-decoration: underline;
 }
 
 // Typography
@@ -9,4 +19,12 @@ body {
 
 p,li {
 	font-size: 16px;
+}
+
+// Basic layout
+// ----------------
+
+#content {
+	padding-top: 2em;
+	padding-bottom: 2em;
 }
