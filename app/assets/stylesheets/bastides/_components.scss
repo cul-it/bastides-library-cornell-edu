@@ -1,19 +1,39 @@
-.home-text {
-	border-bottom: 5px solid $aqua;
-	margin-bottom: 1em;
-	strong {
-		color: $navy;
-	}
-	small {
-		font-size: 75%;
-	}
-}
+// Well
+// ----------------
 .well {
 	box-shadow: none;
 	border-radius: 0;
 	border: 0;
 	background: $well-bg;
 }
+// Home page text
+// -----------------
+.home-text {
+	// border-bottom: 5px solid $aqua;
+	// margin-bottom: 1em;
+	strong {
+		// color: $navy;
+		font-size: 150%;
+		color: $turquoise;
+	}
+	small {
+		font-size: 75%;
+	}
+	a {
+		// color: white;
+		display: inline-block;
+		margin-left: .5em;
+	}
+	p {
+		margin-bottom: 0;
+	}
+}
+.well.home-text {
+	// background: #898b82;
+	// color: white;
+}
+// Bastides button
+// -----------------
 .btn-bastides {
 	background: $turquoise;
 	color: white;
