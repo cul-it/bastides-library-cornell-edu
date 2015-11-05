@@ -31,11 +31,11 @@
 
   </head>
   <%# TODO: this isn't working %>
-  <% unless has_search_parameters? %>
-    <body class="<%= render_body_class %> blacklight-home">
-  <% else %>
+  <%# unless has_search_parameters? %>
+    <!-- <body class="<%= render_body_class %> blacklight-home"> -->
+  <%# else %>
     <body class="<%= render_body_class %>">
-  <% end %>
+  <%# end %>
     <%= render :partial => 'shared/header_navbar' %>
 
     <%= render partial: 'shared/ajax_modal' %>

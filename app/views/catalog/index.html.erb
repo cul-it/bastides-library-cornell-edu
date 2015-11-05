@@ -3,7 +3,7 @@
 </div>
 
 <div id="content" class="<%= main_content_classes %>">
-	<% unless has_search_parameters? %>
+	<% if current_page?('/') %>
 		<%= render 'home' %>
 	<% end %>
     <%= render 'search_results' %>
