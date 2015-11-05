@@ -50,3 +50,42 @@
 		display: none;
 	}
 }
+
+// Constraints 
+// ----------------
+#appliedParams {
+	margin-bottom: 1em;
+}
+.filterValue {
+	font-weight: 700;
+	color: $navy;
+}
+.remove {
+	.glyphicon {
+		color: $turquoise;
+	}
+}
+.constraint {
+	.remove:hover {
+		background: $turquoise !important;
+		border-color: $turquoise !important;
+		.glyphicon {
+			color: white;
+		}
+	}
+}
+// Facets
+// --------------
+.facet-values {
+	li {
+		.selected {
+			color: $navy;
+			font-weight: 700;
+		}
+	}
+}
+// Sort and per page
+// ------------------
+#sort-dropdown .dropdown-toggle, #per_page-dropdown .dropdown-toggle {
+	color: $link-color;
+}
