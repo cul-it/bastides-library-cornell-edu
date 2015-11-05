@@ -31,25 +31,25 @@
 
   </head>
   <%# TODO: this isn't working %>
-  <% if current_page?('/') %>
+  <% unless has_search_parameters? %>
     <body class="<%= render_body_class %> blacklight-home">
   <% else %>
     <body class="<%= render_body_class %>">
   <% end %>
-  <%= render :partial => 'shared/header_navbar' %>
+    <%= render :partial => 'shared/header_navbar' %>
 
-  <%= render partial: 'shared/ajax_modal' %>
+    <%= render partial: 'shared/ajax_modal' %>
 
-  <div id="main-container" class="container">
-    <%= content_tag :h1, application_name, class: 'sr-only application-heading' %>
+    <div id="main-container" class="container">
+      <%= content_tag :h1, application_name, class: 'sr-only application-heading' %>
 
-    <%= render :partial=>'/flash_msg', layout: 'shared/flash_messages' %>
+      <%= render :partial=>'/flash_msg', layout: 'shared/flash_messages' %>
 
-    <%= yield %>
-  </div>
-  </div><%# add extra closing div to fix this layout bug: https://issues.library.cornell.edu/browse/DIGCOLL-219 %>
+      <%= yield %>
+    </div>
+    </div><%# add extra closing div to fix this layout bug: https://issues.library.cornell.edu/browse/DIGCOLL-219 %>
 
-  <%= render :partial => 'shared/footer' %>
+    <%= render :partial => 'shared/footer' %>
     <script>
       $('.bxslider').bxSlider({
         nextSelector: '#slider-next',

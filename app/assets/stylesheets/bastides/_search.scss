@@ -41,3 +41,12 @@
 	border-radius: 0;
 	padding: 6px;
 }
+
+// Sort and per page
+// -------------------
+// Hide on home page
+.blacklight-home {
+	#sortAndPerPage {
+		display: none;
+	}
+}
