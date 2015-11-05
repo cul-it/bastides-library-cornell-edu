@@ -89,3 +89,13 @@
 #sort-dropdown .dropdown-toggle, #per_page-dropdown .dropdown-toggle {
 	color: $link-color;
 }
+
+// Pagination
+// --------------
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+	background-color: $turquoise;
+	border-color: $turquoise;
+}
+.pagination > li > a, .pagination > li > span {
+	color: $link-color;
+}
