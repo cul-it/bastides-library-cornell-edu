@@ -1,0 +1,11 @@
+<% if query_has_constraints? %>
+
+      <div id="appliedParams" class="clearfix">
+        <div class="pull-right">
+          <%#=link_to t('blacklight.search.start_over'), start_over_path, :class => "catalog_startOverLink btn btn-sm btn-default", :id=>"startOverLink" %>
+          <%# specify maps in url until this is handled better %>
+          <a href="/?view=maps" class="catalog_startOverLink btn btn-sm btn-default">Start over</a>
+        </div>
+        <%= render_constraints(params) %>
+      </div>
+<% end %>
