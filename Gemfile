@@ -31,7 +31,7 @@ gem 'devise'
 gem 'blacklight_range_limit'
 gem 'openseadragon'
 
-# Use font-awesome for icons 
+# Use font-awesome for icons
 gem 'font-awesome-sass', '~> 4.3.0'
 
 #static pages gem
