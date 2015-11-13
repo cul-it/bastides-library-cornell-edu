@@ -88,13 +88,18 @@ header {
 		font-size: 16px;
 	}
 }
-
 // Medium devices (desktops, 992px and up)
 @media (min-width: $screen-md) {
 	.brand {
-		font-size: 28px;
+		font-size: 26px;
 	}
 	.cul-brand {
 		font-size: 20px;
+	}
+}
+// Large devices (large desktops, 1200px and up)
+@media (min-width: $screen-lg) {
+	.brand {
+		font-size: 28px;
 	}
 }
