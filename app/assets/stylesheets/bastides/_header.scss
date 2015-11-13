@@ -1,8 +1,16 @@
 header {
 	background: $navy;
-	padding: .75em 0;
 }
 
+// Mobile header
+// ----------------
+.mobile-cornell-identity {
+	height: 45px;
+	background: $cornell-black;
+	img {
+		padding-left: 15px;
+	}
+}
 
 // Branding
 // ------------------- //
@@ -32,7 +40,7 @@ header {
 // Bastides brand
 .brand {
 	text-transform: uppercase;
-	font-size: 28px;
+	font-size: 24px;
 	font-family: $font-family-cul;
 	color: white;
 	line-height: 1em;
@@ -46,9 +54,6 @@ header {
 // Util links
 // ------------- //
 .user-links {
-	.navbar-nav {
-		float: right;
-	}
 	.navbar-nav > li > a {
 		padding-top: 5px;
 		padding-bottom: 5px;
@@ -60,5 +65,36 @@ header {
 	.nav > li > a:focus {
 		background: inherit;
 		text-decoration: underline;
+	}
+}
+
+// MEDIA QUERIES
+// -------------------------
+
+// Small devices (tablets, 768px and up)
+@media (min-width: $screen-sm) { 
+	header {
+		padding: .75em 0;
+	}
+	.user-links {
+		.navbar-nav {
+			float: right;
+		}
+	}
+	.brand {
+		font-size: 24px;
+	}
+	.cul-brand {
+		font-size: 16px;
+	}
+}
+
+// Medium devices (desktops, 992px and up)
+@media (min-width: $screen-md) {
+	.brand {
+		font-size: 28px;
+	}
+	.cul-brand {
+		font-size: 20px;
 	}
 }
