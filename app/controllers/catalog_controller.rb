@@ -5,16 +5,7 @@ class CatalogController < ApplicationController
 
   include Blacklight::Catalog
 
-before_action  do
-
-
-
-
-end
-
-
-
-  configure_blacklight do |config|          
+  configure_blacklight do |config|
     config.view.gallery.partials = [:index_header]
     #config.view.masonry.partials = [:index]
     #config.view.slideshow.partials = [:index]
@@ -25,8 +16,6 @@ end
       :qt => 'search',
       :rows => 10,
       :fq => 'collection_tesim:"John Reps Collection - Bastides"'}
-
-
 
     # solr path which will be added to solr base url before the other solr params.
     #config.solr_path = 'select'
@@ -47,14 +36,9 @@ end
     config.view.maps.coordinates_facet_field = 'where_ssim'
     config.view.maps.facet_mode = "coordinates" # or "coordinates"    config.view.maps.search_mode = "coordinates"
 
-
-
     # solr field configuration for search results/index views
     config.index.title_field = 'title_tesim'
     config.index.thumbnail_field = 'media_URL_size_2_tesim'
-
-
-
 
     config.index.display_type_field = 'project_id_ssi'
 
@@ -151,12 +135,13 @@ end
     config.add_show_field 'country_location_tesim', :label => 'Country', :link_to_search => true
 
     #collection fields
-   
+
     #- reps
     config.add_show_field 'fd_27325_tsi', :label => 'Date taken', :link_to_search => true
     config.add_show_field 'founder_tesim', :label => 'Founder', :link_to_search => true
     config.add_show_field 'village_tesim', :label => 'Village', :link_to_search => true
     config.add_show_field 'senechal_tesim', :label => 'Senechal', :link_to_search => true
+    config.add_show_field 'street_view_link', :label => 'Google Maps', accessor: :street_view_link, helper_method: 'link_help'
 
     #boilerplate fields, commented out ones don't have needed helpers yet
     config.add_show_field 'mat_tech_tesim', :label => 'Materials/Techniques', :link_to_search => true
