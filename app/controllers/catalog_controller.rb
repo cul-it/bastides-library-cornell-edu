@@ -36,16 +36,9 @@ class CatalogController < ApplicationController
     config.view.maps.coordinates_facet_field = 'where_ssim'
     config.view.maps.facet_mode = "coordinates" # or "coordinates"    config.view.maps.search_mode = "coordinates"
 
-config.add_index_field = "where_geocoordinates"
-config.add_index_field = "true_bearing_fsi"
-
-
     # solr field configuration for search results/index views
     config.index.title_field = 'title_tesim'
     config.index.thumbnail_field = 'media_URL_size_2_tesim'
-
-
-
 
     config.index.display_type_field = 'project_id_ssi'
 
