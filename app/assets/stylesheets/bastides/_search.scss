@@ -1,11 +1,5 @@
 .header-search {
 	@include make-sm-column(6);
-	text-align: right;
-	form {
-		margin-top: 2em;
-		float: right;
-		width: 100%;
-	}
 }
 .search-btn,
 .search-btn:hover,
@@ -27,6 +21,20 @@
 .input-group-btn {
 	width: 1% !important;
 }
+
+// Search form
+// ---------------------------
+.search-query-form {
+	select.form-control {
+		float: left;
+		width: 30%;
+		margin-right: .25em;
+	}
+}
+.search-input-group {
+	width: auto;
+}
+
 
 // Search results - gallery
 // ---------------------------
@@ -98,4 +106,37 @@
 }
 .pagination > li > a, .pagination > li > span {
 	color: $link-color;
+}
+
+// MEDIA QUERIES
+// -------------------------
+
+// Small devices (tablets, 768px and up)
+@media (min-width: $screen-sm) { 
+	.header-search {
+		text-align: right;
+		form {
+			margin-top: 2em;
+			float: right;
+			width: 100%;
+		}
+	}
+	.search-input-group {
+		width: 68%;
+	}
+	.search-query-form {
+		select.form-control {
+			float: none;
+			// width: 100%;
+			margin-right: 0;
+		}
+	}
+
+}
+
+// Medium devices (desktops, 992px and up)
+@media (min-width: $screen-md) {
+	// .search-input-group {
+	// 	width: 75%;
+	// }
 }
