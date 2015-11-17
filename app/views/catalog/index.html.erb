@@ -3,8 +3,11 @@
 </div>
 
 <div id="content" class="<%= main_content_classes %>">
-	<% if current_page?('/') %>
-		<%= render 'home' %>
-	<% end %>
-    <%= render 'search_results' %>
+    <% if !has_search_parameters? %>
+      <%= render 'home' %>
+    <% end %>
+    <% if params[:f].present? %>
+      <%= has_location_selected? %>
+    <% end %>
+      <%= render 'search_results' %>
 </div>
