@@ -15,7 +15,7 @@ a:hover {
 }
 
 // Add underlines to some links
-.masthead, .home-text, .document, .page_links, footer, .cornell-footer, .blacklight-pages-show #main-container {
+.masthead, .home-text, .document, .page_links, footer, .cornell-footer, .blacklight-pages-show #main-container, .modal-body {
 	a, a:hover {
 		text-decoration: underline;
 	}
