@@ -2,53 +2,14 @@
 // See DIGCOLL-70
 
 #documents.gallery {
-  display: block !important;
+  // display: block !important;
   .document {
+    -webkit-box-flex: none !important;
+    -moz-box-flex: none !important;
+    -webkit-flex: none !important;
+    -ms-flex: none !important;
+    flex: none !important;
     min-width: inherit !important;
     min-height: inherit !important;
-    // height: 450px;
-    // height: 300px;
-    .thumbnail {
-      a:first-child {
-        display: block;
-        height: 150px;
-      }
-      img {
-        max-height: 150px;
-      }
-      .caption {
-        height: 100px;
-      }
-    }
   }
 }
-
-// From blacklight gem - make all the same height
-// https://github.com/projectblacklight/blacklight-gallery/wiki/Make-the-tiles-all-have-the-same-height-(clip-contents)
-// -----------------------------
-// #documents.row.gallery {
-//   display: block;
-//   display: -moz-box;
-//   display: -ms-flexbox;
-//   display: flex;
-
-//   .document {
-//     display: flex;
-//     flex: none;
-//     .thumbnail {
-//       &> a {
-//         display: block;
-//         height: 80px;
-//       }
-//       .caption {
-//         height: 160px;
-//         overflow: hidden;
-//         dl.document-metadata {
-//           margin-bottom: 0;
-//         }
-//       }
-//       width: 100%;
-//       padding-bottom: 10px;
-//     }
-//   }
-// }
