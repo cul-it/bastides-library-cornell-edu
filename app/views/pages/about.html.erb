@@ -26,3 +26,14 @@
   <li><%= render '/pages/slide10' %></li>
   <li><%= render '/pages/slide11' %></li>
 </ul>
+
+<%# for about page slider %>
+<script>
+  $('.bxslider').bxSlider({
+    nextSelector: '#slider-next',
+    prevSelector: '#slider-prev',
+    nextText: 'Next<i class="fa fa-chevron-right"></i>',
+    prevText: ' <i class="fa fa-chevron-left"></i>Previous',
+    adaptiveHeight: true,
+  });
+</script>
