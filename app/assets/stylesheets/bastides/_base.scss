@@ -14,6 +14,19 @@ a:hover {
 	text-decoration: underline;
 }
 
+// Add underlines to some links
+.masthead, .home-text, .document, .page_links, footer, .cornell-footer, .blacklight-pages-show #main-container {
+	a, a:hover {
+		text-decoration: underline;
+	}
+}
+// Remove from some
+.blacklight-pages-show #main-container .dropdown {
+	a, a:hover {
+		text-decoration: none;
+	}
+}
+
 // Typography
 // ------------ //
 
