@@ -87,6 +87,8 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise-guests (0.3.3)
+      devise
     dotenv (1.0.2)
     dotenv-deployment (0.3.0)
       dotenv (~> 1.0)
@@ -208,6 +210,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise
+  devise-guests (~> 0.3)
   dotenv
   dotenv-deployment
   font-awesome-sass (~> 4.3.0)
