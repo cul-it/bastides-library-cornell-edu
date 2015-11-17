@@ -1,0 +1,8 @@
+<%= blacklight_map_tag('blacklight-index-map',
+                       {data:{searchcontrol: true,
+                              catalogpath: catalog_index_path,
+                              placenamefield: blacklight_config.view.maps.placename_field,
+                              clustercount:'hits',
+                              searchresultsview: 'gallery'
+                       }}) %>
+<%= javascript_tag "$('#blacklight-index-map').blacklight_leaflet_map(#{geojson_features});" %>
