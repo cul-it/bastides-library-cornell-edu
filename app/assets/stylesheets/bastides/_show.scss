@@ -110,7 +110,6 @@
 	width: 300px !important;
 }
 
-
 // Bookmark toggle
 // ------------------------ //
 .bookmark-toggle {
@@ -118,6 +117,19 @@
 }
 label.toggle_bookmark {
 	min-width: auto;
+}
+// Download link
+.download-link {
+	float: left;
+	margin-right: 1.5em;
+	text-transform: uppercase;
+	margin-top: .5em;
+	i {
+		padding-left: .5em;
+	}
+}
+.bookmark_toggle {
+	float: left; 
 }
 
 // Book image / text collections
