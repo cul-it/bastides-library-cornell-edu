@@ -1,0 +1,39 @@
+<div class="row">
+	<div class="col-sm-9">
+		<h2>Brief Introduction</h2>
+	</div>
+	<%= render '/pages/about_menu' %>
+</div>
+<div class="row">
+	<div class="col-sm-8">
+		<h3>What is a bastide?</h3>
+	</div>
+	<div class="col-sm-4 prev-next">
+  		<span id="slider-prev"></span> | <span id="slider-next"></span></p>
+  	</div>
+</div>
+
+<ul class="bxslider">
+  <li><%= render '/pages/slide1' %></li>
+  <li><%= render '/pages/slide2' %></li>
+  <li><%= render '/pages/slide3' %></li>
+  <li><%= render '/pages/slide4' %></li>
+  <li><%= render '/pages/slide5' %></li>
+  <li><%= render '/pages/slide6' %></li>
+  <li><%= render '/pages/slide7' %></li>
+  <li><%= render '/pages/slide8' %></li>
+  <li><%= render '/pages/slide9' %></li>
+  <li><%= render '/pages/slide10' %></li>
+  <li><%= render '/pages/slide11' %></li>
+</ul>
+
+<%# for about page slider %>
+<script>
+  $('.bxslider').bxSlider({
+    nextSelector: '#slider-next',
+    prevSelector: '#slider-prev',
+    nextText: 'Next<i class="fa fa-chevron-right"></i>',
+    prevText: ' <i class="fa fa-chevron-left"></i>Previous',
+    adaptiveHeight: true
+  });
+</script>
