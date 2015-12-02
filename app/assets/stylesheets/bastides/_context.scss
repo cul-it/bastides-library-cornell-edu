@@ -7,6 +7,9 @@
 }
 .bxslider {
 	margin-top: 1em;
+	.well {
+		background: black;
+	}
 }
 .prev-next {
 	text-align: right;
@@ -80,5 +83,15 @@
 .back-link {
 	i {
 		margin-right: .25em;
+	}
+}
+// Then and Later slider
+// ----------------------
+.then-later {
+	.row div {
+		text-align: center;
+	}
+	.caption {
+		color: white;
 	}
 }

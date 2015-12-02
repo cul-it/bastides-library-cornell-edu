@@ -1,0 +1,32 @@
+<div class="row">
+	<div class="col-sm-9">
+		<h2>Bastides: Then and Later</h2>
+	</div>
+	<%= render '/pages/about_menu' %>
+</div>
+<div class="row">
+	<div class="col-sm-4 col-sm-offset-8 prev-next">
+  		<span id="slider-prev"></span> | <span id="slider-next"></span></p>
+  	</div>
+</div>
+
+<ul class="bxslider">
+  <li><%= render '/pages/compare/slide1' %></li>
+  <li><%= render '/pages/compare/slide2' %></li>
+  <li><%= render '/pages/compare/slide3' %></li>
+  <li><%= render '/pages/compare/slide4' %></li>
+  <li><%= render '/pages/compare/slide5' %></li>
+  <li><%= render '/pages/compare/slide6' %></li>
+  <li><%= render '/pages/compare/slide7' %></li>
+</ul>
+
+<%# for about page slider %>
+<script>
+  $('.bxslider').bxSlider({
+    nextSelector: '#slider-next',
+    prevSelector: '#slider-prev',
+    nextText: 'Next<i class="fa fa-chevron-right"></i>',
+    prevText: ' <i class="fa fa-chevron-left"></i>Previous',
+    adaptiveHeight: true
+  });
+</script>
