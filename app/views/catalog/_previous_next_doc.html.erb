@@ -1,6 +1,5 @@
 <% #Using the Bootstrap Pagination class  -%>
 <% #DEPRECATED - using id="previousNextDocument" as a selector is deprecated and will be removed in Blacklight 6.0 %>
-<% @download_url = render_document_show_field_value(:document => @document, :field => 'media_URL_tesim') %>
 <div id='previousNextDocument' class='pagination-search-widgets'>
   <% if @previous_document || @next_document %>
     <div class="page_links">
@@ -21,7 +20,6 @@
   <%= render_show_doc_actions @document do |config, inner| %>
   <% if inner.include? "bookmark" %>
     <div class="pull-right bookmark-toggle">
-      <a href="<%= @download_url %>" class="download-link btn btn-xs btn-default" title="Download">Download<i class="fa fa-download"></i></a>
       <%= inner %>
     </div>
    <% end %>
