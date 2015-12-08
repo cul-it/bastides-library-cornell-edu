@@ -42,3 +42,63 @@
 	font-size: 14px;
 	text-align: right;
 }
+
+// Dust cover
+// -----------------
+.dust {
+	background: $gray-dark;
+	text-align: center;
+	.hero {
+		img {
+			width: 800px;
+			height: auto;
+			max-width: 100%;
+		}
+	}
+	.cover-title {
+		position: relative;
+		// margin-top: -200px;
+		h1 {
+			font-weight: 700;
+			font-size: 48px;
+			a {
+				color: white;
+			}
+			a:hover, a:active, a:focus {
+				text-decoration: none;
+			}
+		}
+		h2 {
+			text-transform: none;
+			a {
+				color: white;
+			}
+			a:hover, a:active, a:focus {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+
+// MEDIA QUERIES
+// -------------------------
+// Small devices (tablets, 768px and up)
+@media (min-width: $screen-sm) {
+	.dust {
+		.cover-title {
+			margin-top: -170px;
+		}
+	}
+}
+// Medium devices (desktops, 992px and up)
+@media (min-width: $screen-md) {
+	.dust {
+		.cover-title {
+			margin-top: -170px;
+		}
+	}
+}
+// Large devices (desktops, 1200px and up)
+// @media (min-width: $screen-lg) {
+// }
