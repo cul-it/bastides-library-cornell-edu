@@ -5,15 +5,13 @@
 	<%= render '/pages/about_menu' %>
 </div>
 <div class="row">
-	<div class="col-sm-8">
-		<h3>What is a bastide?</h3>
-	</div>
-	<div class="col-sm-4 prev-next">
+	<div class="col-sm-4 col-sm-offset-8 prev-next">
   		<span id="slider-prev"></span> | <span id="slider-next"></span></p>
   	</div>
 </div>
 
 <ul class="bxslider">
+  <li><%= render '/pages/intro/slide0' %></li>
   <li><%= render '/pages/intro/slide1' %></li>
   <li><%= render '/pages/intro/slide2' %></li>
   <li><%= render '/pages/intro/slide3' %></li>
