@@ -39,6 +39,9 @@
     <%= render :partial => 'shared/header_navbar' %>
 
     <%= render partial: 'shared/ajax_modal' %>
+    <% if !has_search_parameters? %>
+      <%= render 'home' %>
+    <% end %>
 
     <div id="main-container" class="container">
       <%= content_tag :h1, application_name, class: 'sr-only application-heading' %>
