@@ -130,10 +130,9 @@ class CatalogController < ApplicationController
     config.add_show_field 'creator_tesim', :label => 'Creator(s)', :link_to_search => true
     config.add_show_field 'author_tesim', :label => 'Author', :link_to_search => true
     config.add_show_field 'date_tesim', :label => 'Image Date', :link_to_search => true
-    config.add_show_field 'description_tesim', :label => 'Description',:link_to_search => true
+    config.add_show_field 'description_tesim', :label => 'Description'
     config.add_show_field 'location_tesim', :label => 'Location', :link_to_search => true
     config.add_show_field 'creation_site_location_tesim', :label => 'Creation Site', :link_to_search => true
-    config.add_show_field 'country_location_tesim', :label => 'Country', :link_to_search => true
 
     #collection fields
 
