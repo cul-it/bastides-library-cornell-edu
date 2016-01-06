@@ -72,9 +72,8 @@ class CatalogController < ApplicationController
     config.add_facet_field 'date_tesim', :label => 'Image Date', :limit => 5, :range => true
     #config.add_facet_field 'creator_facet_tesim', :label => 'Creator', :sort => 'count', :limit => 5
     config.add_facet_field 'location_facet_tesim', :label => 'Location', :sort => 'count', :limit => 5
-    #config.add_facet_field 'subject_tesim', :label => 'Subject', :limit => 5
-    config.add_facet_field 'mat_tech_tesim', :label => 'Materials', :limit => 5
-    config.add_facet_field 'founder_tesim', :label => 'Village Founder', :limit => 5
+    config.add_facet_field 'location_tesim', :label => 'Location', :show=> false
+    config.add_facet_field 'founder_tesim', :label => 'Founder', :limit => 5
     config.add_facet_field 'fd_27325_tsi', :label => 'Year of photo', :limit => 5
     config.add_facet_field 'senechal_tesim', :label => 'Senechal', :limit => 5
     config.add_facet_field 'village_location_tesim', :label => 'Village', :show => false
