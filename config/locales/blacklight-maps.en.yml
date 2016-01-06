@@ -6,7 +6,7 @@ en:
         bbox_search: 'View items that intersect with this bounding box'
         placename_search: 'View all items from this location'
         item: 'item'
-        point_search: 'View all items from this location'
+        point_search: 'View photographs from this location'
         search_ctrl_cue: 'Search for all items within the current map window'
       title: 'Map'
       leader: 'Click on a marker to search for items from that location.'
