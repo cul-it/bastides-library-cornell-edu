@@ -5,8 +5,15 @@ class CatalogController < ApplicationController
 
   include Blacklight::Catalog
 
+before_action 'index' do
+    if request.path == root_path 
+        unless has_search_parameters?
+            params[:view] = 'maps' 
+        end
+    end
+end
   configure_blacklight do |config|
-    config.view.gallery.partials = [:index_header]
+    config.view.gallery.partials = [:index_header, :index]
     #config.view.masonry.partials = [:index]
     #config.view.slideshow.partials = [:index]
 
@@ -36,7 +43,6 @@ class CatalogController < ApplicationController
     config.view.maps.coordinates_field = "where_geocoordinates"
     config.view.maps.coordinates_facet_field = 'where_ssim'
     config.view.maps.facet_mode = "coordinates" # or "coordinates"    config.view.maps.search_mode = "coordinates"
-
     # solr field configuration for search results/index views
     config.index.title_field = 'title_tesim'
     config.index.thumbnail_field = 'media_URL_size_2_tesim'
