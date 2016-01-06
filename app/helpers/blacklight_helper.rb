@@ -17,4 +17,6 @@ def has_location_selected?
   end
 end
 
+
+
 end
