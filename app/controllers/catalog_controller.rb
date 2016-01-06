@@ -5,8 +5,15 @@ class CatalogController < ApplicationController
 
   include Blacklight::Catalog
 
+before_action 'index' do
+    if request.path == root_path 
+        unless has_search_parameters?
+            params[:view] = 'maps' 
+        end
+    end
+end
   configure_blacklight do |config|
-    config.view.gallery.partials = [:index_header]
+    config.view.gallery.partials = [:index_header, :index]
     #config.view.masonry.partials = [:index]
     #config.view.slideshow.partials = [:index]
 
@@ -36,7 +43,6 @@ class CatalogController < ApplicationController
     config.view.maps.coordinates_field = "where_geocoordinates"
     config.view.maps.coordinates_facet_field = 'where_ssim'
     config.view.maps.facet_mode = "coordinates" # or "coordinates"    config.view.maps.search_mode = "coordinates"
-
     # solr field configuration for search results/index views
     config.index.title_field = 'title_tesim'
     config.index.thumbnail_field = 'media_URL_size_2_tesim'
@@ -72,12 +78,11 @@ class CatalogController < ApplicationController
     config.add_facet_field 'date_tesim', :label => 'Image Date', :limit => 5, :range => true
     #config.add_facet_field 'creator_facet_tesim', :label => 'Creator', :sort => 'count', :limit => 5
     config.add_facet_field 'location_facet_tesim', :label => 'Location', :sort => 'count', :limit => 5
-    #config.add_facet_field 'subject_tesim', :label => 'Subject', :limit => 5
-    config.add_facet_field 'mat_tech_tesim', :label => 'Materials', :limit => 5
-    config.add_facet_field 'founder_tesim', :label => 'Village Founder', :limit => 5
+    config.add_facet_field 'location_tesim', :label => 'Location', :show=> false
+    config.add_facet_field 'founder_tesim', :label => 'Founder', :limit => 5
     config.add_facet_field 'fd_27325_tsi', :label => 'Year of photo', :limit => 5
     config.add_facet_field 'senechal_tesim', :label => 'Senechal', :limit => 5
-    config.add_facet_field 'village_tesim', :label => 'Village', :limit => 5
+    config.add_facet_field 'village_location_tesim', :label => 'Village', :show => false
     config.add_facet_field 'keywords_tesim', :label => 'Keywords', :limit => 5
     config.add_facet_field 'creation_site_location_tesim', :label => 'Creation Site', show: false
 
@@ -105,14 +110,16 @@ class CatalogController < ApplicationController
     # handler defaults, or have no facets.
     config.add_facet_fields_to_solr_request!
 
-    config.add_index_field 'date_tesim', :label => 'Image Date'
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field 'village_tesim', :label => 'Village'
-    config.add_index_field 'founder_tesim', :label => 'Founder'
-    config.add_index_field 'market_square_details_tesim', :label => 'Market Square Details'
-    config.add_index_field 'creator_tesim', :label => 'Creator', :link_to_search => true
+    #config.add_index_field 'village_location_tesim', :label => 'Village', :link_to_search => true
+    config.add_index_field 'founder_tesim', :label => 'Founder', :link_to_search => true
+    config.add_index_field 'senechal_tesim', :label => 'Senechal', :link_to_search => true
+    config.add_index_field 'date_founded_tsi', :label => 'Founding Date'
+    config.add_index_field 'date_tesim', :label => 'Image Date'
+
+
     #config.add_index_field 'collection_tesim', :label => 'Collection', :link_to_search => true
 
 
@@ -129,20 +136,19 @@ class CatalogController < ApplicationController
     #config.add_show_field 'collection_tesim', :label => 'Collection', :link_to_search => true
     config.add_show_field 'creator_tesim', :label => 'Creator(s)', :link_to_search => true
     config.add_show_field 'author_tesim', :label => 'Author', :link_to_search => true
-    config.add_show_field 'date_tesim', :label => 'Image Date', :link_to_search => true
-    config.add_show_field 'description_tesim', :label => 'Description',:link_to_search => true
-    config.add_show_field 'location_tesim', :label => 'Location', :link_to_search => true
+    config.add_show_field 'description_tesim', :label => 'Description'
     config.add_show_field 'creation_site_location_tesim', :label => 'Creation Site', :link_to_search => true
-    config.add_show_field 'country_location_tesim', :label => 'Country', :link_to_search => true
 
     #collection fields
 
     #- reps
-    config.add_show_field 'fd_27325_tsi', :label => 'Date taken', :link_to_search => true
+    config.add_show_field 'village_location_tesim', :label => 'Village', :link_to_search => true
     config.add_show_field 'founder_tesim', :label => 'Founder', :link_to_search => true
-    config.add_show_field 'village_tesim', :label => 'Village', :link_to_search => true
     config.add_show_field 'senechal_tesim', :label => 'Senechal', :link_to_search => true
+    config.add_show_field 'date_founded_tsi', :label => 'Founding Date'
+    config.add_show_field 'location_tesim', :label => 'Location', :link_to_search => true
     config.add_show_field 'street_view_link', :label => 'Google Maps', accessor: :street_view_link, helper_method: 'link_help'
+    config.add_show_field 'date_tesim', :label => 'Image Date', :link_to_search => true
 
     #boilerplate fields, commented out ones don't have needed helpers yet
     config.add_show_field 'mat_tech_tesim', :label => 'Materials/Techniques', :link_to_search => true
