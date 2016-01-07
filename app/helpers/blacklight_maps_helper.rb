@@ -1,5 +1,5 @@
-  module BlacklightMapsHelper
-  include Blacklight::BlacklightHelperBehavior
+module BlacklightMapsHelper
+  include Blacklight::BlacklightMapsHelperBehavior
   
 
   def link_to_point_search point_coordinates
