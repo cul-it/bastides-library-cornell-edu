@@ -22,7 +22,7 @@ end
     config.default_solr_params = {
       :qt => 'search',
       :rows => 10,
-      :fq => 'collection_tesim:"John Reps Collection - Bastides"',
+      :fq => '-status_ssi:"Unpublished" AND -status_ssi:"Suppressed" AND +collection_tesim:"John Reps Collection - Bastides"',
       :sort => 'id asc'}
 
     # solr path which will be added to solr base url before the other solr params.
