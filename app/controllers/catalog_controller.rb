@@ -147,8 +147,9 @@ end
     config.add_show_field 'senechal_tesim', :label => 'Senechal', :link_to_search => true
     config.add_show_field 'date_founded_tsi', :label => 'Founding Date'
     config.add_show_field 'location_tesim', :label => 'Location', :link_to_search => true
-    config.add_show_field 'street_view_link', :label => 'Google Maps', accessor: :street_view_link, helper_method: 'link_help'
     config.add_show_field 'date_tesim', :label => 'Image Date', :link_to_search => true
+    config.add_show_field 'street_view_link', :label => 'Google Maps', accessor: :street_view_link, helper_method: 'link_help'
+    config.add_show_field 'where_ssim', :label => 'Coordinates'
 
     #boilerplate fields, commented out ones don't have needed helpers yet
     config.add_show_field 'mat_tech_tesim', :label => 'Materials/Techniques', :link_to_search => true

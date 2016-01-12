@@ -21,6 +21,9 @@
 		color: $aqua-dark;
 		background: inherit;
 	}
+	.nav > li.border:first-child > a {
+		border-top: 1px solid #c0c4c2;
+	}
 }
 
 
