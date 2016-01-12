@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //
 // Required by Blacklight-Maps
 //= require blacklight-maps//
