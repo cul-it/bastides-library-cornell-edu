@@ -14,7 +14,6 @@
   <div id="openseadragon1"></div>
 
 <script>
-  //<![CDATA[
   function initOpenSeadragon() {
   OpenSeadragon ({
         id: "openseadragon1",
@@ -28,7 +27,7 @@
         tileSources: "http://s3.amazonaws.com/sharedshelftosolr.library.cornell.edu/public/<%= @project %>/<%= @asset %>/image/info.json"
       });
   }
+
   window.onload = initOpenSeadragon;
   document.addEventListener("page:load", initOpenSeadragon); // Initialize when using turbolinks
-  //]]>
 </script>
