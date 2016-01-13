@@ -3,6 +3,9 @@
 </div>
 
 <div id="content" class="<%= main_content_classes %>">
+	<% if !has_search_parameters? %>
+		<%= render 'home' %>
+	<% end %>
     <% if params[:f].present? %>
       <%= has_location_selected? %>
     <% end %>
