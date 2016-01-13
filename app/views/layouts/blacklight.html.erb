@@ -38,11 +38,6 @@
   <%# end %>
     <%= render :partial => 'shared/header_navbar' %>
     <%= render partial: 'shared/ajax_modal' %>
-    <% if params[:controller] == 'catalog' %>
-    <% if !has_search_parameters? && params[:action] == 'index'%>
-      <%= render 'home' %>
-    <% end %>
-    <% end %>
 
     <div id="main-container" class="container">
       <%= content_tag :h1, application_name, class: 'sr-only application-heading' %>
