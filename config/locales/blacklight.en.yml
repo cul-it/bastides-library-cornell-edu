@@ -4,7 +4,7 @@ en:
 
     search:
       facets:
-        title: 'Browse Bastides by:'
+        title: 'Browse Images by:'
       bookmarks:
         present: "In Selected Items"
         absent: "Select"
