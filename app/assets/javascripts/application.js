@@ -26,4 +26,3 @@
 //= require 'blacklight_range_limit'
 
 // require lightbox
-//= require jquery.bxslider.min
