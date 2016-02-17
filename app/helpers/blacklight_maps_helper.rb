@@ -2,12 +2,14 @@ module BlacklightMapsHelper
   include Blacklight::BlacklightMapsHelperBehavior
   
 
-  def link_to_point_search point_coordinates
-    new_params = params.except(:controller, :action, :view, :id, :spatial_search_type, :coordinates)
-    new_params[:spatial_search_type] = "point"
-    new_params[:coordinates] = "#{point_coordinates[1]},#{point_coordinates[0]}"
-    new_params[:view] = 'gallery'
-    link_to(t('blacklight.maps.interactions.point_search'), catalog_index_path(new_params))
+  # return the placename value to be used as a link
+  def map_thumbnail_value(geojson_hash)
+    geojson_hash[:properties][blacklight_config.view.maps.map_thumbnail_property.to_sym]
   end
+
+  def map_id_value(geojson_hash)
+    geojson_hash[:properties][blacklight_config.view.maps.map_id_property.to_sym]
+  end
+
 
 end
