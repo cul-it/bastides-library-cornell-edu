@@ -22,7 +22,7 @@ end
     config.default_solr_params = {
       :qt => 'search',
       :rows => 10,
-      :fq => '-status_ssi:"Unpublished" AND -status_ssi:"Suppressed" AND +collection_tesim:"John Reps Collection - Bastides"',
+      :fq => 'collection_tesim:"John Reps Collection - Bastides"',
       :sort => 'id asc'}
 
     # solr path which will be added to solr base url before the other solr params.
@@ -37,12 +37,20 @@ end
 
 
     # geolocation settings
+    ## blacklight-maps configuration default values
 
-    config.add_facet_field 'where_ssim', :limit => -2, :label => 'Coordinates', :show => false
+        config.view.maps.coordinates_field = 'where_geocoordinates'
+        config.view.maps.geojson_field = 'geojson_ssim'
+        config.view.maps.placename_field = 'location_tesim'
+        config.view.maps.map_thumbnail_property = 'thumb'
+        config.view.maps.map_id_property = 'id'
+        config.view.maps.facet_mode = 'geojson'
+        config.add_facet_field 'geojson_ssim', :limit => -2, :label => 'geojson', :show => false
+
     #config.show.partials << :show_maplet
-    config.view.maps.coordinates_field = "where_geocoordinates"
-    config.view.maps.coordinates_facet_field = 'where_ssim'
-    config.view.maps.facet_mode = "coordinates" # or "coordinates"    config.view.maps.search_mode = "coordinates"
+
+
+   # config.show.partials << :show_maplet
     # solr field configuration for search results/index views
     config.index.title_field = 'title_tesim'
     config.index.thumbnail_field = 'media_URL_size_2_tesim'
