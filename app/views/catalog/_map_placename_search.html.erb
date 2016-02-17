@@ -1,0 +1,11 @@
+<% # content for the popup for a point feature - run a new search for this location -%>
+<h5 class="geo_popup_heading">
+  <%= render_placename_heading(geojson_hash) %>
+</h5>
+
+<a href="/catalog/<%= map_id_value(geojson_hash)  %>">
+
+<img src="<%= map_thumbnail_value(geojson_hash)  %>" class="img-responsive">
+
+</a>
+                          
