@@ -65,3 +65,25 @@
 		height: auto;
 	}
 }
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+
+
+.row.masonry {
+ -moz-column-width: 24em;
+ -webkit-column-width: 24em;
+ -moz-column-gap: 1em;
+ -webkit-column-gap:1em; 
+  
+}
+
+.masonry .item {
+ display: inline-block;
+ padding:  .25rem;
+ width:  100%; 
+}
+
+.masonry .well {
+ position:relative;
+ display: block;
+}
