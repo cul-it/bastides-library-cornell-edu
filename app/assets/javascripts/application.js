@@ -25,4 +25,4 @@
 // this:
 //= require 'blacklight_range_limit'
 
-// require lightbox
+//= require lightbox
