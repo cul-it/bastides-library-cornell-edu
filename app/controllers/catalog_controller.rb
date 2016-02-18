@@ -22,7 +22,7 @@ end
     config.default_solr_params = {
       :qt => 'search',
       :rows => 10,
-      :fq => 'collection_tesim:"John Reps Collection - Bastides"',
+      :fq => '-status_ssi:"Unpublished" AND collection_tesim:"John Reps Collection - Bastides"',
       :sort => 'id asc'}
 
     # solr path which will be added to solr base url before the other solr params.
@@ -158,6 +158,7 @@ end
     config.add_show_field 'date_tesim', :label => 'Image Date', :link_to_search => true
     config.add_show_field 'street_view_link', :label => 'Google Maps', accessor: :street_view_link, helper_method: 'link_help'
     config.add_show_field 'where_ssim', :label => 'Coordinates'
+    config.add_show_field 'notes_tesim', :label => 'Town Description'
 
     #boilerplate fields, commented out ones don't have needed helpers yet
     config.add_show_field 'mat_tech_tesim', :label => 'Materials/Techniques', :link_to_search => true
