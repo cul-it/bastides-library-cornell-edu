@@ -12,11 +12,10 @@
 // -------------- //
 .leaflet-popup {
 	img {
-		max-width: 100%;
+		max-width: 100% !important;
 	}
 }
 .geo_popup_heading {
-	font-size: 16px;
 	text-align: center;
 	line-height: 1.4em;
 }

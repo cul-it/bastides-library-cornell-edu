@@ -1,35 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-    <!-- Mobile viewport optimization h5bp.com/ad -->
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    
-    <!-- Internet Explorer use the highest version available -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
-    <!--[if IEMobile]>
-      <meta http-equiv="cleartype" content="on">
-    <![endif]-->
-
-    <title>John Reps Bastides Collection</title>
-    <%= opensearch_description_tag application_name, opensearch_catalog_url(:format => 'xml') %>
-    <%= favicon_link_tag 'favicon.png' %>
-    <%= stylesheet_link_tag "application", media: "all" %>
-    <%= csrf_meta_tags %>
-    <%= content_for(:head) %>
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-  </head>
-  <body class="dust">
   	<div class="container">
   		<a href="http://www.cornell.edu"><%= image_tag "cornell-black.gif" , alt: "Cornell University" %></a>
 	  	<div class="hero">
@@ -40,5 +9,3 @@
 			</div>
 		</div>
 	  </div>
-  </body>
- </html>
