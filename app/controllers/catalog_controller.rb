@@ -5,13 +5,6 @@ class CatalogController < ApplicationController
 
   include Blacklight::Catalog
 
-before_action 'index' do
-    if request.path == root_path 
-        unless has_search_parameters?
-            params[:view] = 'maps' 
-        end
-    end
-end
   configure_blacklight do |config|
     config.view.gallery.partials = [:index_header, :index]
     #config.view.masonry.partials = [:index]

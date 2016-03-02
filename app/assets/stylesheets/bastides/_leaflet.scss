@@ -19,3 +19,9 @@
 	text-align: center;
 	line-height: 1.4em;
 }
+
+// Hide map info ("# items found, # locations mapped")
+// ----------------------------------------------------
+.mapped-count, .mapped-caveat {
+	display: none;
+}
