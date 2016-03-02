@@ -246,4 +246,7 @@ class CatalogController < ApplicationController
   end
 
 
+    def store_preferred_view
+      session[:preferred_view] = 'maps'
+    end
 end
