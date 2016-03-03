@@ -30,6 +30,8 @@ gem 'blacklight-maps'
 gem 'devise'
 gem 'blacklight_range_limit'
 gem 'openseadragon'
+gem 'httpclient'
+
 
 # Use font-awesome for icons
 gem 'font-awesome-sass', '~> 4.3.0'

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
 
   # get '/about' => 'high_voltage/pages#show', id: 'about'
-  # get '/bastides' => 'high_voltage/pages#show', id: 'bastides'
+  get '/bastides' => 'catalog#bastides'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
