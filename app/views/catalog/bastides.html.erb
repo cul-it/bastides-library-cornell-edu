@@ -1,0 +1,13 @@
+<div id="content" class="col-sm-12">
+
+<h2>All Bastides</h2>
+<ul>
+<% @bastides.each do |bastide| %>
+<% if (@bastides.index(bastide) % 2) == 0 %>
+<li>
+<%= link_to bastide,'/?f%5Blocation_facet_tesim%5D%5B%5D=' + bastide %>
+</li>
+<% end %>
+<% end %>
+</ul>
+</div>
