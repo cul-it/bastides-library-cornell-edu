@@ -151,7 +151,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'date_tesim', :label => 'Image Date', :link_to_search => true
     config.add_show_field 'street_view_link', :label => 'Google Maps', accessor: :street_view_link, helper_method: 'link_help'
     config.add_show_field 'where_ssim', :label => 'Coordinates'
-    config.add_show_field 'notes_tesim', :label => 'Town Description'
+    #config.add_show_field 'notes_tesim', :label => 'Town Description'
 
     #boilerplate fields, commented out ones don't have needed helpers yet
     config.add_show_field 'mat_tech_tesim', :label => 'Materials/Techniques', :link_to_search => true
