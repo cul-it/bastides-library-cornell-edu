@@ -13,8 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //
-// Required by Blacklight-Maps
-//= require blacklight-maps//
 // Required by Blacklight
 //= require blacklight/blacklight
 

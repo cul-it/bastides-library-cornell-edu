@@ -11,12 +11,11 @@
  * file per style scope.
  *
  *= require_self
- 
+
  *
  * Used by blacklight_range_limit
  *= require  'blacklight_range_limit'
  *= require blacklight_gallery
- *= require blacklight_maps
  *= require openseadragon
  *= require lightbox
 */

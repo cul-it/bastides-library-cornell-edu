@@ -10,7 +10,7 @@ class CatalogController < ApplicationController
     #config.view.masonry.partials = [:index]
     #config.view.slideshow.partials = [:index]
 
-
+    config.view.gallery.default = true
     ## Default parameters to send to solr for all search-like requests. See also SearchBuilder#processed_parameters
     config.default_solr_params = {
       :qt => 'search',
@@ -32,13 +32,14 @@ class CatalogController < ApplicationController
     # geolocation settings
     ## blacklight-maps configuration default values
 
-        config.view.maps.coordinates_field = 'where_geocoordinates'
-        config.view.maps.geojson_field = 'geojson_ssim'
-        config.view.maps.placename_field = 'location_tesim'
-        config.view.maps.map_thumbnail_property = 'thumb'
-        config.view.maps.map_id_property = 'id'
-        config.view.maps.facet_mode = 'geojson'
-        config.add_facet_field 'geojson_ssim', :limit => -2, :label => 'geojson', :show => false
+    #    config.view.maps.coordinates_field = 'where_geocoordinates'
+    #    config.view.maps.geojson_field = 'geojson_ssim'
+    #    config.view.maps.placename_field = 'location_tesim'
+    #    config.view.maps.map_thumbnail_property = 'thumb'
+    #    config.view.maps.map_id_property = 'id'
+    #    config.view.maps.search_mode = 'coordinates'
+    #    config.view.maps.facet_mode = 'coordinates'
+    #    config.add_facet_field 'where_geocoordinates', :limit => -2, :label => 'coordinates', :show => false
 
     #config.show.partials << :show_maplet
 
@@ -247,7 +248,7 @@ class CatalogController < ApplicationController
 
 
     def store_preferred_view
-      session[:preferred_view] = 'maps'
+      session[:preferred_view] = 'gallery'
     end
 
       def bastides
