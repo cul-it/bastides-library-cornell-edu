@@ -32,14 +32,14 @@ class CatalogController < ApplicationController
     # geolocation settings
     ## blacklight-maps configuration default values
 
-    #    config.view.maps.coordinates_field = 'where_geocoordinates'
-    #    config.view.maps.geojson_field = 'geojson_ssim'
-    #    config.view.maps.placename_field = 'location_tesim'
-    #    config.view.maps.map_thumbnail_property = 'thumb'
-    #    config.view.maps.map_id_property = 'id'
-    #    config.view.maps.search_mode = 'coordinates'
-    #    config.view.maps.facet_mode = 'coordinates'
-    #    config.add_facet_field 'where_geocoordinates', :limit => -2, :label => 'coordinates', :show => false
+       config.view.maps.coordinates_field = 'where_geocoordinates'
+       config.view.maps.geojson_field = 'geojson_ssim'
+       config.view.maps.placename_field = 'location_tesim'
+       config.view.maps.map_thumbnail_property = 'thumb'
+       config.view.maps.map_id_property = 'id'
+       config.view.maps.search_mode = 'coordinates'
+       config.view.maps.facet_mode = 'coordinates'
+       config.add_facet_field 'where_geocoordinates', :limit => -2, :label => 'coordinates', :show => false
 
     #config.show.partials << :show_maplet
 
@@ -248,13 +248,13 @@ class CatalogController < ApplicationController
 
 
     def store_preferred_view
-      session[:preferred_view] = 'gallery'
+      session[:preferred_view] = 'maps'
     end
 
       def bastides
         base_solr = Blacklight.solr_config[:url].gsub(/\/solr\/.*/,'/solr')
         dbclnt = HTTPClient.new
-        @bastidesResponse = dbclnt.get_content("http://jrc88.solr.library.cornell.edu/solr/digitalcollections/select?q=*&fq=collection_tesim%3A%22John+Reps+Collection+-+Bastides%22&rows=0&df=location_facet_tesim&wt=json&indent=true&facet=true&facet.limit=1000&facet.query=*&facet.field=location_facet_tesim&facet.sort=index"  )
+        @bastidesResponse = dbclnt.get_content("https://digcoll.internal.library.cornell.edu/solr/digitalcollections2/select?q=*&fq=collection_tesim%3A%22John+Reps+Collection+-+Bastides%22&rows=0&df=location_facet_tesim&wt=json&indent=true&facet=true&facet.limit=1000&facet.query=*&facet.field=location_facet_tesim&facet.sort=index"  )
         if !@bastidesResponse.nil?
             @bastides = JSON.parse(@bastidesResponse)
             @bastides = @bastides['facet_counts']['facet_fields']['location_facet_tesim']

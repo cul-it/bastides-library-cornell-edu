@@ -54,6 +54,12 @@ GEM
       bootstrap-sass (~> 3.0)
       openseadragon (>= 0.2.0)
       rails
+    blacklight-maps (0.4.0)
+      blacklight (>= 5.12.0)
+      bootstrap-sass (~> 3.2)
+      leaflet-markercluster-rails
+      leaflet-rails
+      rails
     blacklight_range_limit (5.2.0)
       blacklight (~> 5.15)
       jquery-rails
@@ -117,6 +123,10 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
+    leaflet-markercluster-rails (0.7.0)
+      railties (>= 3.1)
+    leaflet-rails (1.4.0)
+      rails (>= 4.2.0)
     lightbox2-rails (2.8.2.1)
       railties (>= 3.1)
     loofah (2.2.0)
@@ -213,8 +223,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  blacklight (~> 5.16)
+  blacklight
   blacklight-gallery
+  blacklight-maps
   blacklight_range_limit
   byebug
   coffee-rails (~> 4.1.0)
@@ -239,4 +250,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.16.0
+   1.16.2
