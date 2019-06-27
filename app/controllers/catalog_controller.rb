@@ -50,7 +50,7 @@ class CatalogController < ApplicationController
         config.view.maps.placename_field = "location_tesim"
         config.view.maps.coordinates_facet_field = "geojson_ssim"
         config.view.maps.facet_mode = "geojson" # "geojson" or "coordinates"
-        config.view.maps.maxzoom = 18
+        config.view.maps.spatial_query_dist = 0.005
 
         config.add_facet_field 'geojson_ssim', :limit => -2, :label => 'Coordinates', :show => false
 
