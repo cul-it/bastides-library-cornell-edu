@@ -24,8 +24,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'blacklight', '~> 5.16'
+gem 'blacklight'
 gem 'blacklight-gallery'
+gem 'blacklight-maps'
 gem 'devise'
 gem 'blacklight_range_limit'
 gem 'openseadragon'
