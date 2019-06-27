@@ -32,15 +32,29 @@ class CatalogController < ApplicationController
     # geolocation settings
     ## blacklight-maps configuration default values
 
-       config.view.maps.coordinates_field = 'where_geocoordinates'
-       config.view.maps.geojson_field = 'geojson_ssim'
-       config.view.maps.placename_field = 'location_tesim'
-       config.view.maps.map_thumbnail_property = 'thumb'
-       config.view.maps.map_id_property = 'id'
-       config.view.maps.search_mode = 'coordinates'
-       config.view.maps.facet_mode = 'coordinates'
-       config.add_facet_field 'where_geocoordinates', :limit => -2, :label => 'coordinates', :show => false
+       # config.view.maps.coordinates_field = 'where_geocoordinates'
+       # config.view.maps.geojson_field = 'geojson_ssim'
+       # config.view.maps.placename_field = 'location_tesim'
+       # config.view.maps.map_thumbnail_property = 'thumb'
+       # config.view.maps.map_id_property = 'id'
+       # config.view.maps.search_mode = 'coordinates'
+       # config.view.maps.facet_mode = 'coordinates'
+       # config.add_facet_field 'where_geocoordinates', :limit => -2, :label => 'coordinates', :show => false
+       # config.view.maps.show_initial_zoom = 5
 
+       # copy map controller values from singlecore
+       config.view.maps.geojson_field = "geojson_ssim"
+        config.view.maps.placename_property = "location_tesim"
+        config.view.maps.coordinates_field = "where_geocoordinates"
+        config.view.maps.search_mode = "coordinates" # "placename" or "coordinates"
+        config.view.maps.placename_field = "location_tesim"
+        config.view.maps.coordinates_facet_field = "geojson_ssim"
+        config.view.maps.facet_mode = "geojson" # "geojson" or "coordinates"
+        config.view.maps.maxzoom = 18
+
+        config.add_facet_field 'geojson_ssim', :limit => -2, :label => 'Coordinates', :show => false
+
+    # call show_map in _show_default.html.erb
     #config.show.partials << :show_maplet
 
 

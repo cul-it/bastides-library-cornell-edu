@@ -20,3 +20,6 @@
 
 #ignore vendor
 /vendor
+
+#Ignore mac junk
+*.DS_store
