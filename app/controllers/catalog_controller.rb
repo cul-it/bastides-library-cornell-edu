@@ -275,9 +275,9 @@ class CatalogController < ApplicationController
         base_solr = Blacklight.solr_config[:url].gsub(/\/solr\/.*/,'/solr')
         dbclnt = HTTPClient.new
         @bastidesResponse =  JSON.parse(authHTTPClient.get_content("#{ENV['SOLR_URL']}/select?q=*&fq=collection_tesim%3A%22John+Reps+Collection+-+Bastides%22&rows=0&df=location_facet_tesim&wt=json&indent=true&facet=true&facet.limit=1000&facet.query=*&facet.field=location_facet_tesim&facet.sort=index")).with_indifferent_access
-#        if !@bastidesResponse.nil?
-#            @bastides = JSON.parse(@bastidesResponse)
-#            @bastides = @bastides['facet_counts']['facet_fields']['location_facet_tesim']
-#        end
+        if !@bastidesResponse.nil?
+            @bastides = @bastidesResponse
+            @bastides = @bastides['facet_counts']['facet_fields']['location_facet_tesim']
+        end
   end
 end
